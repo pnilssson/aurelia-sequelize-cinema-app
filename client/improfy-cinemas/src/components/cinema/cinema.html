@@ -1,0 +1,24 @@
+<template>
+  <require from='../movie/movie'></require>
+  <div class="container">
+    <div class="row pt-4 pb-3">
+      <div class="col">
+        <div class="card">
+          <h5 class="card-header">${cinemaTitle}</h5>
+          <div class="card-body">
+            <p class="card-text">${cinemaDescription}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a route-href="route: home" class="btn btn-primary">Back to cinemas</a>
+    <div class="row">
+      <div class="col pt-3">
+        <h3>Movies shown at ${cinemaTitle}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <movie repeat.for="movie of movies" class="col-md-6 col-lg pt-2" id.bind="movie.id" title.bind="movie.title" description.bind="movie.description" cinemaId.bind="movie.cinemaId"></movie>
+    </div>
+  </div>
+</template>

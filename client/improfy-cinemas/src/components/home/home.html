@@ -1,0 +1,8 @@
+<template>
+  <require from='../cinema-card/cinema-card'></require>
+  <div class="container">
+    <div class="row pt-4">
+      <cinema-card repeat.for="cinema of cinemas" class="col-md-6 col-lg pt-2" id.bind="cinema.id" title.bind="cinema.title" description.bind="cinema.description"></cinema-card>
+    </div>
+  </div>
+</template>
